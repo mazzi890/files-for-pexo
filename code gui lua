@@ -1,0 +1,45 @@
+function showAIGUI()
+    local g = [[beamngguiconfig 1
+callback system AIGUICallback
+title system configuration
+
+
+
+
+container
+  type = verticalStack
+  name = root
+
+
+
+
+control
+  type = chooser
+  name = aimode
+  description = AI Mode
+  level = 1
+  selection = ]] .. aiMode .. [[
+
+
+
+
+  option = off Off
+  option = player Chasing Player
+  option = car0 Flee from player
+
+
+
+
+control
+  type = doneButton
+  icon = tools/gui/images/iconAccept.png
+  description = Done
+  level = 2
+
+
+
+
+]]    
+    --print(g)
+    gameEngine:showGUI(g)
+end
